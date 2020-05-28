@@ -1,0 +1,68 @@
+
+<div class="validation" *ngIf="editedAEventId >= 0">
+
+  <table id="tabeSelect">
+    <tr>
+      <th>Selected Event details (id = {{editedAEventId}})</th>
+    </tr>
+  </table>
+
+  <table id="tabelDetail2">
+
+    <tr>
+      <td>Titel</td>
+      <td><input type="text" name="titel" required [(ngModel)]="editedEvent3.titel"></td>
+    <tr>
+
+    <tr>
+      <td>start</td>
+      <td><input type="text" required name="start" [(ngModel)]="editedEvent3.start"></td>
+    </tr>
+    <tr>
+    <td>end</td>
+    <td><input type="text" required name="end" [(ngModel)]="editedEvent3.end"></td>
+  </tr>
+
+    <tr>
+      <td>Status</td>
+      <td><select type="text" name="status" class="custom-select" [(ngModel)]="editedEvent3.status">
+
+        <option value="DRAFT">DRAFT</option>
+        <option value="PUBISHED">PUBISHED</option>
+        <option value="CANCELLED">CANCELLED</option>
+
+      </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Entrance Fee</td>
+      <td><input type="text" [(ngModel)]="editedEvent3.participationFee"></td>
+    </tr>
+
+    <tr>
+      <td>Max Participants</td>
+      <td><input type="text" [(ngModel)]="editedEvent3.maxParticipants"></td>
+    </tr>
+
+
+
+  </table>
+
+
+  <button (click)="deleteClick()" [disabled]="!nothingHasChanged()"class="btn">Delete</button>
+  <button (click)="saveClick()" [disabled]="nothingHasChanged()"  class="btn">Save</button>
+  <button (click)="clearClick()" class="btn">Clear</button>
+  <button (click)="resetClick()" [disabled]="nothingHasChanged()" class="btn">Reset</button>
+  <button (click)="cancelClick()" class="btn">Cancel</button>
+
+
+
+</div>
+
+
+
+
+
+
+

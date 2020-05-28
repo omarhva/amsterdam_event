@@ -1,0 +1,36 @@
+
+<form class="validation aform" (ngSubmit)="onSigup(f)" #f="ngForm">
+
+  <table id="tabeSelect">
+    <tr>
+      <th>Login</th>
+    </tr>
+  </table>
+
+
+  <table id="tabelDetail42">
+
+    <tr>
+      <td for="email">Email</td>
+      <td>
+        <input type="text" id="email" ngModel name="email" placeholder="Your Email" required  #email ="ngModel"  >
+      </td>
+    <tr>
+    <tr>
+      <td for="password">Password</td>
+      <td>
+        <input type="password" id="password" ngModel name="password" placeholder="Your Password" required  #password ="ngModel" minlength="6">
+      </td>
+    <tr>
+
+  </table>
+
+
+  <button class="btn" type="sumbit"  [disabled]="!f.valid" >Sign up</button>
+
+
+
+
+</form>
+
+

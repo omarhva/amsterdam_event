@@ -1,0 +1,81 @@
+
+<form class="validation aform" *ngIf="theEditedEventId >= 0"
+      #editForm="ngForm"
+      (keydown.enter)="$event.preventDefault()">
+
+  <table id="tabeSelect">
+    <tr>
+      <th>Selected Event details (id = {{theEditedEventId}})</th>
+    </tr>
+  </table>
+
+  <table id="tabelDetail42">
+
+    <tr>
+      <td>Titel</td>
+      <td>
+        <input type="text" ngModel name="titel" required  #name ="ngModel" minlength="10"
+               [(ngModel)]="editedEvent42.titel">
+      </td>
+    <tr>
+
+    <tr>
+      <td>start</td>
+      <td><input ngModel type="text" required name="start" #start="ngModel" [(ngModel)]="editedEvent42.start" ></td>
+    </tr>
+    <tr>
+      <td>end</td>
+      <td><input ngModel type="text" required name="end" #end ="ngModel" [(ngModel)]="editedEvent42.end" ></td>
+    </tr>
+
+    <tr>
+      <td>Status</td>
+      <td><select  type="text" name="status" class="custom-select" [(ngModel)]="editedEvent42.status">
+
+        <option value="DRAFT">DRAFT</option>
+        <option value="PUBISHED">PUBISHED</option>
+        <option value="CANCELLED">CANCELLED</option>
+
+      </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Entrance Fee</td>
+      <td><input ngModel name="participationFee" required pattern="^[0-9]+.[0-9]+$"
+                 type="text"  #participationFee ="ngModel"[(ngModel)]="editedEvent42.participationFee"></td>
+    </tr>
+
+    <tr>
+      <td>Max Participants</td>
+      <td><input ngModel name="maxParticipants" required pattern="[0-9]*"
+                 type="text" #maxParticipants ="ngModel" [(ngModel)]="editedEvent42.maxParticipants" > </td>
+    </tr>
+
+
+
+  </table>
+
+
+  <button (click)="deleteClick()" [disabled]="!nothingHasChanged()"class="btn">Delete</button>
+  <button (click)="onSaveClick()" [disabled]= "nothingHasChanged() || !editForm.valid" class="btn">Save</button>
+  <button (click)="clearClick()" class="btn">Clear</button>
+  <button (click)="resetClick()" [disabled]="nothingHasChanged()" class="btn">Reset</button>
+  <button (click)="cancelClick()" class="btn">Cancel</button>
+  <button (click)="onDetail()" class="btn">detail</button>
+
+  <span class="validationError" *ngIf="!name.valid || !start.valid || !end.valid ||
+     !participationFee.valid || !maxParticipants.valid ">
+      Please! fix the input errors in the highlighted fields </span>
+
+
+</form>
+
+
+
+
+
+
+
+
+

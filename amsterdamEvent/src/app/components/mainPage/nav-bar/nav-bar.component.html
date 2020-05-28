@@ -1,0 +1,38 @@
+
+
+<div class="navbar">
+  <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/home"  >Home</a>
+
+  <div class="dropdown">
+    <button class="dropbtn" routerLinkActive="active">My Events
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="dropdown-content">
+      <a routerLink="/events/overvieuw1" routerLinkActive="active">All events list</a>
+      <a routerLink="events/overvieuw2" routerLinkActive="active">M/D (component store)</a>
+      <a routerLink="/events/overvieuw3" routerLinkActive="active">M/D (from service)</a>
+      <a routerLink="/events/overvieuw4" routerLinkActive="active">M/D (queryparams)</a>
+      <a routerLink="/events/overvieuw42" routerLinkActive="active">M/D (M/D (validated))</a>
+    </div>
+
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" routerLinkActive="active">My Events 2
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="dropdown-content">
+      <a routerLink="/events/overvieuw11" routerLinkActive="active">aEvents11</a>
+    </div>
+
+  </div>
+
+  <a href="#Myaccount" >My account</a>
+  <a href="#Myaccount" >My registration</a>
+  <div class="topnav-right">
+    <a routerLink="/error" routerLinkActive="active">Sing up</a>
+    <a routerLink="/error" routerLinkActive="active">Log in</a>
+  </div>
+</div>
+

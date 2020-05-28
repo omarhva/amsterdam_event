@@ -1,0 +1,44 @@
+
+
+<div class="navbar">
+  <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/home"  >Home</a>
+
+  <div class="dropdown">
+    <button class="dropbtn" routerLinkActive="active">My Events 1
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="dropdown-content">
+      <a routerLink="/events/overvieuw1" routerLinkActive="active">All events list</a>
+      <a routerLink="events/overvieuw2" routerLinkActive="active">M/D (component store)</a>
+      <a routerLink="/events/overvieuw3" routerLinkActive="active">M/D (from service)</a>
+      <a routerLink="/events/overvieuw4" routerLinkActive="active">M/D (queryparams)</a>
+      <a routerLink="/events/overvieuw42" routerLinkActive="active">M/D (M/D (validated))</a>
+      <a routerLink="/events/overvieuw6" routerLinkActive="active">M/D (M/D (pirsisted))</a>
+    </div>
+
+
+    <button class="dropbtn" routerLinkActive="active">My Events 2
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="dropdown-content">
+      <a routerLink="/events/overvieuw11" routerLinkActive="active">aEvents11</a>
+    </div>
+
+  </div>
+
+  <a href="#Myaccount" >My account</a>
+  <a href="#Myaccount" >My registration</a>
+  <ng-template [ngIf]="!isLoggedIn()"  >
+     <div class="topnav-right">
+    <a routerLink="/signUp" routerLinkActive="active">Sign up </a>
+      <a routerLink="/signIn" routerLinkActive="active">Log in</a>
+     </div>
+    </ng-template>
+  <div class="topnav-right">
+    <a (click)="onLogOut()" *ngIf="isLoggedIn()">Log out</a>
+  </div>
+</div>
+
+

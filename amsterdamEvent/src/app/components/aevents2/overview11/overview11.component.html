@@ -1,0 +1,31 @@
+
+<div class="liste1">
+
+  <router-outlet></router-outlet>
+
+  <h1>List of all Events</h1>
+
+
+  <table id="titelEventTabel">
+    <tr>
+      <th>Event title</th>
+    </tr>
+
+    <tr *ngFor="let ae of aEvents11Service.aEvents; let aIndex = index">
+      <td class="{{aIndex == selectedIndex ? 'selected' : ''}}"
+          (click)="onSelect(aIndex)">{{ae.titel}}</td>
+
+    </tr>
+
+
+  </table>
+
+
+
+  <button (click)="(handelClick())"
+          class="btnAdd">Add Event
+  </button>
+
+
+</div>
+

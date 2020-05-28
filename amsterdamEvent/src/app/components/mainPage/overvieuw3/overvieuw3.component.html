@@ -1,0 +1,30 @@
+<div class="liste1">
+
+  <app-detail3 [(editedAEventId)]="selectedIndex" ></app-detail3>
+
+  <h1>List of all Events</h1>
+
+
+  <table id="titelEventTabel">
+    <tr>
+      <th>Event title</th>
+    </tr>
+
+    <tr *ngFor="let ae of aEventsService.aEvents; let aIndex = index">
+      <td class="{{aIndex == selectedIndex ? 'selected' : ''}}"
+          (click)="onSelect(aIndex)">{{ae.titel}}</td>
+
+    </tr>
+
+
+  </table>
+
+
+  <button (click)="(handelClick())"
+          class="btnAdd">Add Event
+  </button>
+
+
+
+</div>
+

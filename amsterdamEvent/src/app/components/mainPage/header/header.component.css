@@ -1,0 +1,63 @@
+headero.solid
+{  background:#35424a;
+  color:#ffffff;
+  border-style: solid;
+  border-width: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  margin-top: -7px;
+  margin-left: -9px;
+  margin-right: -10px;
+
+}
+.headero img
+{
+  width:324px;
+  height:94px;
+}
+
+.headero h1
+{
+  position: relative;
+  top: 0px;
+  left: 18px;
+  color: red;
+  font-size: 40px;
+}
+.headero h3
+{
+  position: relative;
+  top: -12px;
+  left: 18px;
+padding-bottom: 10px;
+  margin-bottom:-10px ;
+}
+.leftimg
+{
+  float: left;
+  width:75px;
+  height:75px;
+}
+
+.rightimg
+{
+  float: right;
+  width:75px;
+  height:75px;
+}
+.solid h4{
+  padding-left: 47%;
+}
+@media(max-width: 768px){
+  .headero {
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+  header{
+    padding-bottom:20px;
+  }
+
+}
